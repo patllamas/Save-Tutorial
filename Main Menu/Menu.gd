@@ -21,7 +21,7 @@ func save_file():
 
 func load_file():
 	var file = FileAccess.open(player_file, FileAccess.READ)
-	if file.file_exists(player_file):
+	if FileAccess.file_exists(player_file):
 		var loaded_player_data = file.get_var()
 		gold = loaded_player_data.GOLD
 		strength = loaded_player_data.STRENGTH
